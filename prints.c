@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malcosta <malcosta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maluojuara <maluojuara@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:46:53 by malcosta          #+#    #+#             */
-/*   Updated: 2025/08/02 17:23:44 by malcosta         ###   ########.fr       */
+/*   Updated: 2025/08/03 12:12:57 by maluojuara       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,28 +36,15 @@ int	format_prints(va_list *args, char format)
 		printed = ft_putchar(va_arg(*args, int));
 	else if (format == 's')
 		printed = ft_putstr(va_arg(*args, const char *));
+	else if (format == 'd' || format == 'i')
+		printed = ft_putnbr(va_arg(*args, int));
+	else if (format == 'u')
+		printed = ft_putnbr_unsigned(va_arg(*args, unsigned int));
+	else if (format == 'x' || format == 'X')
+		printed = ft_putnbr_hexa(va_arg(*args, int), format);
+	else if (format == 'p')
+		printed = ft_print_ptr(va_arg(*args, void *));
+	else if (format == '%')
+		printed = ft_putchar('%');
 	return (printed);
 }
-
-while (*ptr)
-	{
-		nb_printed += normal_print(&ptr);
-		if (!*ptr)
-			break ;
-		
-		else if (*ptr == 's')
-			nb_printed += ft_putstr(va_arg(args, const char *));
-		else if (*ptr == 'p')
-			print mmsdd
-		else if (*ptr == 'd' || i)
-			jfddd
-		else if (u)
-			jjsjsj
-		else if (x)
-			jjdjddj
-		else if (X)
-			dndkd
-		else if (%)
-			djdjkjkdd
-		ptr++;
-	}

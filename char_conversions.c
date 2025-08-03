@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   char_conversions.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malcosta <malcosta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maluojuara <maluojuara@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:09:18 by malcosta          #+#    #+#             */
-/*   Updated: 2025/08/02 13:49:32 by malcosta         ###   ########.fr       */
+/*   Updated: 2025/08/03 12:49:00 by maluojuara       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ int	ft_putstr(const char *str)
 	int	len;
 
 	len = 0;
+	if (!str)
+		str = "(null)";
 	while (*str)
 	{
-		write(1, str, 1);
+		len += write(1, str, 1);
 		str++;
-		len++;
 	}
 	return (len);
 }
