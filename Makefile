@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: maluojuara <maluojuara@student.42.fr>      +#+  +:+       +#+         #
+#    By: malcosta <malcosta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/02 11:09:35 by malcosta          #+#    #+#              #
-#    Updated: 2025/08/03 13:00:37 by maluojuara       ###   ########.fr        #
+#    Updated: 2025/08/04 09:54:25 by malcosta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRCS = char_conversions.c nb_conversions.c ft_printf.c prints.c
-CC = CC
+CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
